@@ -28,20 +28,6 @@ public class Canvas extends JFrame {
         g.fillOval(x*100 +1, y*100 +1, distance-20, distance-20);    
     }
 
-    public void drawfield2(Graphics g){
-        g.setColor(Color.BLUE);
-        
-        for (int x = start_x; x < end_x; x+=distance){
-            for (int y = start_y; y < end_y; y+=distance){
-                g.drawLine(x, y, x+100, y);
-                g.drawLine(x, y, x, y+100);
-
-            }
-        }
-        g.drawLine(end_x, start_y, end_x, end_y);        
-        g.drawLine(start_x, end_y, end_x, end_y);  
-    }
-
     public void drawfield(Graphics g){
         g.setColor(Color.BLUE);
         g.fillRect(start_x-50, start_y-50, end_x, end_y);
@@ -53,17 +39,5 @@ public class Canvas extends JFrame {
 
             }
         }
-    }
-
-    public void won(Graphics g, String name){        
-        g.setFont(new Font("Dialog", Font.PLAIN, 60));
-		g.setColor(Color.BLACK);
-		g.drawString(name + " hat gewonnen!", 200,400);
-    }
-
-    public void draw(Graphics g){
-        g.setFont(new Font("Dialog", Font.PLAIN, 60));
-		g.setColor(Color.BLACK);
-		g.drawString("unentschieden!", 200,400);
     }
 }
