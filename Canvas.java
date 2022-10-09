@@ -30,8 +30,7 @@ public class Canvas extends JFrame {
 
     public void drawfield(Graphics g){
         g.setColor(Color.BLUE);
-        g.fillRect(start_x-50, start_y-50, end_x, end_y);
-        g.setColor(Color.WHITE);
+        getContentPane().setBackground(Color.BLACK);
         for (int x = start_x; x < end_x; x+=distance){
             for (int y = start_y; y < end_y; y+=distance){
                 g.fillOval(x, y, distance-20, distance-20);
