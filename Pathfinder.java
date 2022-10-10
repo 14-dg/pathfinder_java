@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.io.*;
 
 public class Pathfinder
 {
@@ -12,9 +11,8 @@ public class Pathfinder
         canvas.setSize(SCREENWIDTH, SCREENHEIGHT);
         canvas.setVisible(true);
         Graphics g = canvas.getGraphics();
-        g.setColor(Color.BLACK);
-		g.fillRect(0, 0, SCREENWIDTH, SCREENHEIGHT);
         canvas.drawfield(g);
-    }
 
+        
+    }
 }

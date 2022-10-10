@@ -2,40 +2,23 @@ import java.awt.*;
 import javax.swing.JFrame;
 
 public class Canvas extends JFrame {    
-    int start_x  = 100;
-    int start_y  = 100;   
-    int end_x    = 800;
-    int end_y    = 700;
-    int distance = 100;  
+    int start_x  = 50;
+    int start_y  = 50;   
+    int end_x    = 950;
+    int end_y    = 750;
+    int distance = 20;  
 
     public Canvas(){        
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }          
-  
-    
-    public void drawCross(Graphics g, int x, int y){
-        x+=1;
-        y+=1;
-        g.setColor(Color.GREEN);
-        g.drawLine(x*distance, y*distance, x*distance + distance, y*distance + distance);      
-        g.drawLine(x*distance + distance, y*distance, x*distance, y*distance + distance);      
-    }
 
-    public void drawCircle(Graphics g, int x, int y){
-        x+=1;
-        y+=1;
-        // g.setColor(Color.BLUE);
-        g.fillOval(x*100 +1, y*100 +1, distance-20, distance-20);    
-    }
-
-    public void drawfield(Graphics g){
-        g.setColor(Color.BLUE);
+    public void drawfield(Graphics g){        
+        // sets the backgroundcolor to black
         getContentPane().setBackground(Color.BLACK);
+        g.setColor(Color.BLUE);
         for (int x = start_x; x < end_x; x+=distance){
             for (int y = start_y; y < end_y; y+=distance){
-                g.fillOval(x, y, distance-20, distance-20);
-                g.fillOval(x, y, distance-20, distance-20);
-
+                g.fillRect(x, y, distance-1, distance-1);
             }
         }
     }

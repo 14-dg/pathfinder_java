@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Mausereignisse",
+            "request": "launch",
+            "mainClass": "Mausereignisse",
+            "projectName": "pathfinder_java_e69c71cd"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
